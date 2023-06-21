@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>hc</title>
-</head>
-<body>
-<style>
-html, body {
-  border: 0;
-  padding: 0;
-  background: #111;
-  color: #eee;
-  line-height: 2em;
-}
-</style>
 
-<p>works</p>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Hi, I am a software engineer who develops display driver for Linux kernel and embedded system. Welcome to my page.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hsiao Chien Sung</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Ubuntu&display=swap">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="stylesheet" href="/third_party/animated_bg.css">
+	<link rel="stylesheet" href="/third_party/typing_effect.css">
+</head>
+
+<body>
+	<div id="face" class="noselect">
+
+		<h1 id="logo">hcsung</h1>
+
+		<p class="code">
+			<b>
+				Life is
+				<span class="typed"></span><span class="cursor">&nbsp;</span>
+			</b>
+		</p>
+
+		<a target="_blank" href="https://github.com/hcsung">
+			<img class="icon" src="/third_party/github.svg" />
+		</a>
+		<a target="_blank" href="https://leetcode.com/hcsung">
+			<img class="icon" src="/third_party/leetcode.svg" />
+		</a>
+		<a id="hi">
+			<img class="icon" src="/third_party/maildotru.svg" />
+		</a>
+	</div>
+
+	<script>
+		document.getElementById('hi').setAttribute(
+			'href', 'mailto:'.concat(atob('aGNAaGNzdW5nLmRldg==')));
+	</script>
+	<script src="/animated_bg.js"></script>
+	<script src="/third_party/typing_effect.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,54 @@
+#!/bin/dash
+
+TOOLS="
+aspell
+build-essential
+git
+python3
+python3-pip
+vim
+"
+
+UI="
+gdm3
+gnome-terminal
+firefox
+language-pack-zh*
+yaru-*
+"
+
+# remove snap
+sudo apt -y purge snapd && \
+sudo apt -y autoremove
+
+# block snap
+echo '
+Package: snap snapd
+Pin: release a=*
+Pin-Priority: -10' | sudo tee \
+/etc/apt/preferences.d/snap
+
+# firefox
+sudo add-apt-repository ppa:mozillateam/ppa
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001' | sudo tee \
+/etc/apt/preferences.d/firefox
+
+# update
+sudo apt -y update && \
+sudo apt -y upgrade
+
+# install tools
+sudo apt -y install -f $TOOLS
+
+# install ui
+sudo apt -y install -f $UI
+
+# config
+sudo sed -i 's/\(FONTSIZE\).*/\1="16x32"/' /etc/default/console-setup
+
+# misc
+pip install b4
+. ~/.profile

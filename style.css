@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #110;
+	color: #ccc;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.1rem;
+	letter-spacing: .05rem;
+}
+
+h1,
+h2,
+h3 {
+	color: #eee;
+}
+
+a {
+	color: #fc6;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.3;
+}
+
+p {
+	margin: 1.3rem 0;
+}
+
+span.cursor {
+	display: inline-block;
+	background-color: #ccc;
+	margin-left: .1rem;
+	width: .2rem;
+	animation: blink 1s infinite;
+}
+
+pre,
+.code {
+	font-family: 'Source Code Pro', monospace;
+	letter-spacing: 0;
+}
+
+#logo {
+	font-size: 2.4rem;
+	letter-spacing: .2rem;
+}
+
+.icon {
+	margin: .1rem .4rem;
+	width: 1.4rem;
+	filter: invert(1) sepia(1) saturate(45) hue-rotate(309deg);
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#face {
+	position: absolute;
+	top: 28%;
+	left: 50%;
+	width: 18rem;
+	margin-left: -9rem;
+	text-align: center;
+}
