@@ -19,7 +19,7 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-const textArray = ["hard.", "fun!", "a journey.", "love <3"];
+const textArray = ["fun!", "hard.", "a journey.", "love <3"];
 
 const typedTextSpan = document.querySelector(".typed");
 const cursorSpan = document.querySelector(".cursor");
