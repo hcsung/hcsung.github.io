@@ -12,8 +12,8 @@ class AnimatedBackground {
 
 		// initialize
 		for (let i = 0; i < count; i++) {
-			this.delay.push((i * 2) % 30);
-			this.duration.push((i * 3) % 30 + 20);
+			this.delay.push((i * 2) % 25);
+			this.duration.push((i * 3) % 25 + 25);
 			this.left.push(i * diff - 5);
 		}
 
@@ -23,6 +23,9 @@ class AnimatedBackground {
 		this.left = this.shake(this.left, count);
 
 		this.draw(count);
+
+		window.onresize = this.adjust;
+		this.adjust();
 	}
 
 	rand(min, max) {
@@ -59,6 +62,11 @@ class AnimatedBackground {
 		}
 		ul.classList.add('bg');
 		document.body.appendChild(ul);
+	}
+
+	adjust() {
+		let h = -Math.floor(window.innerHeight) + 'px';
+		document.querySelector(':root').style.setProperty('--tranY', h);
 	}
 }
 
