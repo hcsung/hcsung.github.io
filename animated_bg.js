@@ -68,7 +68,6 @@ class AnimatedBackground {
 	adjust() {
 		let h = -Math.floor(window.innerHeight) + 'px';
 		document.querySelector(':root').style.setProperty('--tranY', h);
-		window.alert(h);
 	}
 }
 
