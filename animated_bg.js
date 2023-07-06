@@ -23,9 +23,10 @@ class AnimatedBackground {
 		this.left = this.shake(this.left, count);
 
 		this.draw(count);
-
-		window.onresize = this.adjust;
 		this.adjust();
+
+		window.addEventListener('orientationchange', this.adjust);
+		window.addEventListener('resize', this.adjust);
 	}
 
 	rand(min, max) {
