@@ -61,7 +61,7 @@ class AnimatedBackground {
 			li.style.left = this.left[i] + '%';
 			ul.appendChild(li);
 		}
-		ul.classList.add('bg');
+		ul.classList.add('bg', 'noselect');
 		document.body.appendChild(ul);
 	}
 
