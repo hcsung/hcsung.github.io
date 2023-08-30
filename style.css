@@ -6,7 +6,7 @@
 body {
 	background: #110;
 	color: #ccc;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: sans-serif;
 	font-size: 1.1rem;
 	letter-spacing: .05rem;
 }
@@ -40,7 +40,7 @@ span.cursor {
 
 pre,
 .code {
-	font-family: 'Source Code Pro', monospace;
+	font-family: monospace;
 	letter-spacing: 0;
 }
 
