@@ -46,12 +46,11 @@ pre,
 
 #logo {
 	font-size: 2.4rem;
-	letter-spacing: .2rem;
+	letter-spacing: .15rem;
 }
 
 .icon {
 	margin: .1rem .4rem;
-	width: 1.4rem;
 	filter: invert(1) sepia(1) saturate(45) hue-rotate(309deg);
 }
 
