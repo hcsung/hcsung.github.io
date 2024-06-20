@@ -1,0 +1,166 @@
+:root {
+    --color-bg: hsl(0, 0%, 7%);
+    --color-font: hsl(0, 0%, 93%);
+    --color-lo: hsl(0, 0%, 75%);
+    --color-dim: hsl(0, 0%, 20%);
+    --color-dark-red: hsla(0, 100%, 30%, 90%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-optical-sizing: auto;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 30pt;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p {
+    margin: .8em 0;
+}
+
+.monospace {
+    font-family: 'Menlo', 'Consolas', monospace;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex.between {
+    justify-content: space-between;
+}
+
+.flex.right {
+    justify-content: flex-end;
+}
+
+.icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%, 0;
+    width: 32px;
+    height: 32px;
+    opacity: .8;
+}
+
+.icon.swap {
+    background-size: 0, 80%;
+}
+
+.button {
+    display: inline-block;
+    opacity: .9;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.button:hover {
+    opacity: .5;
+}
+
+.alert {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity .5s;
+    background-color: var(--color-dark-red);
+    padding: .7em 1em;
+    font-size: 10pt;
+}
+
+.footer {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    opacity: .9;
+    margin: 2.5em;
+}
+
+.footer span::after {
+    content: " - " attr(year);
+}
+
+.typewriter {
+    display: inline-block;
+    font-size: 14pt;
+    margin-left: 1em;
+}
+
+.typewriter::after {
+    content: " ";
+    border-right: solid .3em;
+    padding-left: .4em;
+    animation: blink 1.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0% {
+        border-color: var(--color-lo);
+    }
+
+    50% {
+        border-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes floating-up {
+    0% {
+        opacity: 1;
+        border-radius: 1rem;
+    }
+
+    100% {
+        transform: translateY(-140vh) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.floating-blocks {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.floating-blocks span.blocks {
+    display: block;
+    position: absolute;
+    background: var(--color-dim);
+    animation: floating-up 24s linear infinite;
+    z-index: -1;
+}

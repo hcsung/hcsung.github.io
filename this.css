@@ -1,0 +1,41 @@
+@import 'style.css';
+
+body {
+    background: var(--color-bg);
+    color: var(--color-font);
+}
+
+p {
+    color: var(--color-lo);
+}
+
+#face {
+    position: fixed;
+    width: 300px;
+    top: 32vh;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    z-index: 99;
+}
+
+.button {
+    opacity: .2;
+    margin: 0 2px;
+}
+
+.button:hover {
+    opacity: .9;
+}
+
+.icon.email {
+    background-image: url('icons/email.svg');
+}
+
+.icon.github {
+    background-image: url('icons/github.svg');
+}
+
+.icon.linkedin {
+    background-image: url('icons/linkedin.svg');
+}
