@@ -1,5 +1,125 @@
-html, body {
-    background: hsl(0, 0%, 15%);
-    color: hsl(0, 0%, 95%);
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --color-bg: hsl(0, 0%, 7%);
+    --color-font: hsl(0, 0%, 90%);
+    --color-lo: hsl(0, 0%, 75%);
+    --color-dim: hsl(0, 0%, 20%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--color-bg);
+    color: var(--color-font);
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    line-height: 2em;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: var(--color-lo);
+    margin: .8em 0;
+}
+
+#face {
+    position: fixed;
+    width: 300px;
+    top: 35%;
+    left: 50%;
+    margin-left: -150px;
+    text-align: center;
+    z-index: 99;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button {
+    display: inline-block;
+    width: 2.1rem;
+    height: 2.1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 75%;
+    border-radius: 1rem;
+    opacity: .2;
+    cursor: pointer;
+}
+.button:hover {
+    opacity: 1;
+}
+.button.email {
+    background-image: url("email.svg");
+}
+.button.github {
+    background-image: url("github.svg");
+}
+.button.linkedin {
+    background-image: url("linkedin.svg");
+}
+
+.typing {
+    display: inline-block;
+    font-size: 14pt;
+    margin-left: 1em;
+}
+
+.typing::after {
+    content: " ";
+    border-right: solid .3em;
+    padding-left: .4em;
+    animation: blink 1.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0% {
+        border-color: var(--color-lo);
+    }
+    50% {
+        border-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes floating-up {
+    0%{
+        opacity: 1;
+        border-radius: 1rem;
+    }
+    100%{
+        transform: translateY(-110vh) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.floating{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.floating span.blocks {
+    display: block;
+    position: absolute;
+    background: var(--color-dim);
+    animation: floating-up 25s linear infinite;
+    z-index: -1;
 }
